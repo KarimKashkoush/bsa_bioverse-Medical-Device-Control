@@ -3,6 +3,7 @@ let track = 'https://script.google.com/macros/s/AKfycbxSqLcq7PCr3DmSEToFxPnTrGTv
 
 
 
+
 // Start Validation form
 let formContent = document.getElementById('form');
 let nameArabic = document.getElementById('personalNameArabic');
@@ -166,6 +167,17 @@ unName.onchange = () => {
         unNameInput.value = "";
         unNameInput.classList.remove('hidden');
 
+        nationaltynumber.value = "";
+        nationaltyIdFrontImgFront.value = "";
+        nationaltyIdFrontImgBack.value = "";
+
+        imgFront.classList.remove('hidden');
+        imgBack.classList.remove('hidden');
+        nationalityId.classList.remove('hidden');
+
+    } else if (unName.value != "جامعة المنصورة" && unName.value != "أخري" && unName.value != "الجامعة") {
+        unNameInput.classList.add('hidden');
+        unNameInput.value = unName.value;
         nationaltynumber.value = "";
         nationaltyIdFrontImgFront.value = "";
         nationaltyIdFrontImgBack.value = "";
@@ -416,6 +428,29 @@ nationaltyIdFrontImgBack.oninput = () => {
 
 
 // End Validation form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
